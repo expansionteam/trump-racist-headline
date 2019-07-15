@@ -1,10 +1,15 @@
 import React, { Component } from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { sample, get, map, compact } from "lodash"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import "../components/generator.css"
+import bg from "../images/bg.png"
+import button from "../images/button.png"
+import presents from "../images/presents.png"
+import tear from "../images/tear.png"
+import trump_title from "../images/trump_title.png"
 
 class IndexPage extends Component {
   constructor(props) {
@@ -34,12 +39,39 @@ class IndexPage extends Component {
       <Layout>
         <SEO title="Trump Racist Euphemism Headline Generator" />
         {Racial_Noun && (
-          <>
-            <h1>
-              TRUMP {Verb_Object} OF {Racial_Noun}
-            </h1>
-            <button onClick={this.generate}>Generate</button>
-          </>
+          <div
+            className="standard-page"
+            style={{ backgroundImage: `url(${bg})` }}
+          >
+            <div className="content-holder">
+              <img
+                src={presents}
+                className="daily-logo"
+                alt="Daily Show Logo"
+              />
+              <div className="trump-holder">
+                <img
+                  src={trump_title}
+                  className="trump-title"
+                  alt="Trump Generator"
+                />
+                <div
+                  className="trump-tear"
+                  style={{ backgroundImage: `url(${tear})` }}
+                >
+                  <h1 className="trump-text">
+                    TRUMP {Verb_Object} OF {Racial_Noun}
+                  </h1>
+                </div>
+              </div>
+              <img
+                src={button}
+                onClick={this.generate}
+                className="generate-button"
+                alt=""
+              />
+            </div>
+          </div>
         )}
       </Layout>
     )
