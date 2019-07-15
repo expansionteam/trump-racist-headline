@@ -13,8 +13,27 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-68614222-7",
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: `keyhQoo6d2KXpvKaR`, // may instead specify via env, see below
+        tables: [
+          {
+            baseId: `appy4Z2pcm6UL32Dx`,
+            tableName: `Combinations`,
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
