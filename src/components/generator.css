@@ -59,6 +59,24 @@
   font-style: italic;
 }
 
+.clogo {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  margin: 0;
+}
+
+.trump-tear {
+  position: relative;
+}
+
+.clink {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  margin: 0;
+}
+
 @media only screen and (max-width: 980px) {
   img.trump-title {
     left: -5.3%;
@@ -73,10 +91,28 @@
   .trump-text {
     font-size: 5.5vw;
   }
+  .clogo,
+  .clink {
+    height: 3.2vh;
+  }
 }
 
 @media only screen and (max-width: 520px) {
   .trump-text {
-    font-size: 28px;
+    font-size: 26px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .clogo {
+    left: 10px;
+    bottom: 40px;
+  }
+  .clink {
+    right: 10px;
+    bottom: 40px;
+  }
+  .trump-tear {
+    height: 325px;
   }
 }

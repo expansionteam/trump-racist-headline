@@ -9,6 +9,8 @@ import bg from "../images/bg.png"
 import button from "../images/button.png"
 import presents from "../images/presents.png"
 import tear from "../images/tear.png"
+import clogo from "../images/clogo.png"
+import link from "../images/link.png"
 import trump_title from "../images/trump_title.png"
 
 class IndexPage extends Component {
@@ -62,6 +64,8 @@ class IndexPage extends Component {
                   <h1 className="trump-text">
                     TRUMP {Verb_Object} OF {Racial_Noun}
                   </h1>
+                  <img src={clogo} className="clogo" />
+                  <img src={link} className="clink" />
                 </div>
               </div>
               <img
